@@ -40,27 +40,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCampo = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panelBuscar = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
-            this.panelCategoria = new System.Windows.Forms.Panel();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
-            this.panelMarca = new System.Windows.Forms.Panel();
             this.lblMarca = new System.Windows.Forms.Label();
             this.cboMarca = new System.Windows.Forms.ComboBox();
-            this.panelCriterio = new System.Windows.Forms.Panel();
-            this.panelCampo = new System.Windows.Forms.Panel();
             this.panelFiltroAvanzado = new System.Windows.Forms.Panel();
             this.lblFiltroAvanzado = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.panelContenedor.SuspendLayout();
-            this.panelBuscar.SuspendLayout();
-            this.panelCategoria.SuspendLayout();
-            this.panelMarca.SuspendLayout();
-            this.panelCriterio.SuspendLayout();
-            this.panelCampo.SuspendLayout();
             this.panelFiltroAvanzado.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +75,7 @@
             // 
             this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
-            this.cboCampo.Location = new System.Drawing.Point(94, 6);
+            this.cboCampo.Location = new System.Drawing.Point(94, 29);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(121, 21);
             this.cboCampo.TabIndex = 3;
@@ -95,7 +86,7 @@
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.Enabled = false;
             this.cboCriterio.FormattingEnabled = true;
-            this.cboCriterio.Location = new System.Drawing.Point(94, 6);
+            this.cboCriterio.Location = new System.Drawing.Point(94, 68);
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(121, 21);
             this.cboCriterio.TabIndex = 2;
@@ -103,7 +94,7 @@
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Location = new System.Drawing.Point(3, 12);
+            this.txtFiltrar.Location = new System.Drawing.Point(75, 11);
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(100, 20);
             this.txtFiltrar.TabIndex = 1;
@@ -121,7 +112,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(94, 480);
+            this.btnModificar.Location = new System.Drawing.Point(84, 480);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 6;
@@ -150,17 +141,18 @@
             // 
             // btnDetalles
             // 
-            this.btnDetalles.Location = new System.Drawing.Point(175, 480);
+            this.btnDetalles.Location = new System.Drawing.Point(165, 480);
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(75, 23);
             this.btnDetalles.TabIndex = 8;
             this.btnDetalles.Text = "Ver detalles";
             this.btnDetalles.UseVisualStyleBackColor = true;
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 9);
+            this.label2.Location = new System.Drawing.Point(47, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 6;
@@ -169,7 +161,7 @@
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(48, 9);
+            this.lblCampo.Location = new System.Drawing.Point(46, 32);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(40, 13);
             this.lblCampo.TabIndex = 5;
@@ -177,30 +169,25 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Controls.Add(this.panelBuscar);
-            this.panelContenedor.Controls.Add(this.panelCategoria);
-            this.panelContenedor.Controls.Add(this.panelMarca);
-            this.panelContenedor.Controls.Add(this.panelCriterio);
-            this.panelContenedor.Controls.Add(this.panelCampo);
+            this.panelContenedor.Controls.Add(this.cboCampo);
+            this.panelContenedor.Controls.Add(this.cboCriterio);
+            this.panelContenedor.Controls.Add(this.lblCampo);
+            this.panelContenedor.Controls.Add(this.cboMarca);
+            this.panelContenedor.Controls.Add(this.cboCategoria);
+            this.panelContenedor.Controls.Add(this.label2);
+            this.panelContenedor.Controls.Add(this.lblMarca);
+            this.panelContenedor.Controls.Add(this.btnBuscar);
+            this.panelContenedor.Controls.Add(this.lblCategoria);
+            this.panelContenedor.Controls.Add(this.txtFiltroAvanzado);
             this.panelContenedor.Controls.Add(this.panelFiltroAvanzado);
             this.panelContenedor.Location = new System.Drawing.Point(538, 237);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(312, 238);
             this.panelContenedor.TabIndex = 9;
             // 
-            // panelBuscar
-            // 
-            this.panelBuscar.Controls.Add(this.btnBuscar);
-            this.panelBuscar.Controls.Add(this.txtFiltroAvanzado);
-            this.panelBuscar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBuscar.Location = new System.Drawing.Point(0, 179);
-            this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(312, 39);
-            this.panelBuscar.TabIndex = 5;
-            // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(178, 8);
+            this.btnBuscar.Location = new System.Drawing.Point(198, 186);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 5;
@@ -210,26 +197,16 @@
             // 
             // txtFiltroAvanzado
             // 
-            this.txtFiltroAvanzado.Location = new System.Drawing.Point(51, 10);
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(71, 188);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(121, 20);
             this.txtFiltroAvanzado.TabIndex = 5;
             this.txtFiltroAvanzado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroAvanzado_KeyPress);
             // 
-            // panelCategoria
-            // 
-            this.panelCategoria.Controls.Add(this.lblCategoria);
-            this.panelCategoria.Controls.Add(this.cboCategoria);
-            this.panelCategoria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCategoria.Location = new System.Drawing.Point(0, 140);
-            this.panelCategoria.Name = "panelCategoria";
-            this.panelCategoria.Size = new System.Drawing.Size(312, 39);
-            this.panelCategoria.TabIndex = 4;
-            // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(36, 9);
+            this.lblCategoria.Location = new System.Drawing.Point(34, 149);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(52, 13);
             this.lblCategoria.TabIndex = 1;
@@ -240,25 +217,15 @@
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.Enabled = false;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(94, 6);
+            this.cboCategoria.Location = new System.Drawing.Point(94, 146);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 0;
             // 
-            // panelMarca
-            // 
-            this.panelMarca.Controls.Add(this.lblMarca);
-            this.panelMarca.Controls.Add(this.cboMarca);
-            this.panelMarca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMarca.Location = new System.Drawing.Point(0, 101);
-            this.panelMarca.Name = "panelMarca";
-            this.panelMarca.Size = new System.Drawing.Size(312, 39);
-            this.panelMarca.TabIndex = 3;
-            // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(51, 9);
+            this.lblMarca.Location = new System.Drawing.Point(49, 110);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(37, 13);
             this.lblMarca.TabIndex = 11;
@@ -269,30 +236,10 @@
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.Enabled = false;
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(94, 6);
+            this.cboMarca.Location = new System.Drawing.Point(94, 107);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 21);
             this.cboMarca.TabIndex = 10;
-            // 
-            // panelCriterio
-            // 
-            this.panelCriterio.Controls.Add(this.cboCriterio);
-            this.panelCriterio.Controls.Add(this.label2);
-            this.panelCriterio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCriterio.Location = new System.Drawing.Point(0, 62);
-            this.panelCriterio.Name = "panelCriterio";
-            this.panelCriterio.Size = new System.Drawing.Size(312, 39);
-            this.panelCriterio.TabIndex = 2;
-            // 
-            // panelCampo
-            // 
-            this.panelCampo.Controls.Add(this.lblCampo);
-            this.panelCampo.Controls.Add(this.cboCampo);
-            this.panelCampo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCampo.Location = new System.Drawing.Point(0, 23);
-            this.panelCampo.Name = "panelCampo";
-            this.panelCampo.Size = new System.Drawing.Size(312, 39);
-            this.panelCampo.TabIndex = 1;
             // 
             // panelFiltroAvanzado
             // 
@@ -313,12 +260,22 @@
             this.lblFiltroAvanzado.TabIndex = 0;
             this.lblFiltroAvanzado.Text = "FiltroAvanzado";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Filtro Rapido:";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(862, 558);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.btnELiminar);
             this.Controls.Add(this.btnDetalles);
@@ -334,16 +291,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.panelContenedor.ResumeLayout(false);
-            this.panelBuscar.ResumeLayout(false);
-            this.panelBuscar.PerformLayout();
-            this.panelCategoria.ResumeLayout(false);
-            this.panelCategoria.PerformLayout();
-            this.panelMarca.ResumeLayout(false);
-            this.panelMarca.PerformLayout();
-            this.panelCriterio.ResumeLayout(false);
-            this.panelCriterio.PerformLayout();
-            this.panelCampo.ResumeLayout(false);
-            this.panelCampo.PerformLayout();
+            this.panelContenedor.PerformLayout();
             this.panelFiltroAvanzado.ResumeLayout(false);
             this.panelFiltroAvanzado.PerformLayout();
             this.ResumeLayout(false);
@@ -365,19 +313,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCampo;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Panel panelCampo;
         private System.Windows.Forms.Panel panelFiltroAvanzado;
         private System.Windows.Forms.Label lblFiltroAvanzado;
-        private System.Windows.Forms.Panel panelCriterio;
-        private System.Windows.Forms.Panel panelBuscar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtFiltroAvanzado;
-        private System.Windows.Forms.Panel panelCategoria;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.ComboBox cboCategoria;
-        private System.Windows.Forms.Panel panelMarca;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -267,7 +267,7 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            List<Articulo> listaFiltrada = null;
+            List<Articulo> listaFiltrada = new List<Articulo>();
             string filtro = txtFiltroAvanzado.Text;
             try
             {
@@ -370,6 +370,8 @@ namespace Presentacion
                 {
                     listaFiltrada = listaArticulos;
                 }
+
+
                         dgvArticulos.DataSource = null;
                         dgvArticulos.DataSource = listaFiltrada;
                          ocultarColumna();
@@ -379,6 +381,32 @@ namespace Presentacion
 
                 MessageBox.Show(ex.ToString()); ;
             }
+        }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            Articulo art;
+            try
+            {
+                art = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                frmDetalles detalles = new frmDetalles(art);
+                detalles.ShowDialog();
+            }
+            catch (NullReferenceException)
+            {
+
+                MessageBox.Show("Seleccione un Articulo para ver detalles.");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+           
+            
+
+
+            
+           
         }
     }
 }
