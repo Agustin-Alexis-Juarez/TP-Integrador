@@ -46,6 +46,9 @@
             this.lblMarca = new System.Windows.Forms.Label();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.btnImagen = new System.Windows.Forms.Button();
+            this.lblxNombre = new System.Windows.Forms.Label();
+            this.lblxCodigo = new System.Windows.Forms.Label();
+            this.lblxPrecio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +78,8 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(192, 20);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtDescripcion
             // 
@@ -89,6 +94,8 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(192, 20);
             this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // txtImagen
             // 
@@ -105,6 +112,7 @@
             this.txtPrecio.Size = new System.Drawing.Size(192, 20);
             this.txtPrecio.TabIndex = 8;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
+            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
             // 
             // cboCategoria
             // 
@@ -141,7 +149,7 @@
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 12;
-            this.lblCodigo.Text = "Codigo";
+            this.lblCodigo.Text = "Código";
             // 
             // lblDescripcion
             // 
@@ -150,16 +158,16 @@
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 13;
-            this.lblDescripcion.Text = "Descripcion";
+            this.lblDescripcion.Text = "Descripción";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(19, 189);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(54, 13);
             this.lblCategoria.TabIndex = 14;
-            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.Text = "Categoría";
             // 
             // lblPrecio
             // 
@@ -208,12 +216,57 @@
             this.btnImagen.UseVisualStyleBackColor = true;
             this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
             // 
+            // lblxNombre
+            // 
+            this.lblxNombre.AutoSize = true;
+            this.lblxNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblxNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblxNombre.Location = new System.Drawing.Point(279, 28);
+            this.lblxNombre.Name = "lblxNombre";
+            this.lblxNombre.Size = new System.Drawing.Size(16, 17);
+            this.lblxNombre.TabIndex = 20;
+            this.lblxNombre.Text = "×";
+            this.lblxNombre.Visible = false;
+            // 
+            // lblxCodigo
+            // 
+            this.lblxCodigo.AutoSize = true;
+            this.lblxCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblxCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblxCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblxCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblxCodigo.Location = new System.Drawing.Point(279, 105);
+            this.lblxCodigo.Name = "lblxCodigo";
+            this.lblxCodigo.Size = new System.Drawing.Size(16, 17);
+            this.lblxCodigo.TabIndex = 21;
+            this.lblxCodigo.Text = "×";
+            this.lblxCodigo.Visible = false;
+            // 
+            // lblxPrecio
+            // 
+            this.lblxPrecio.AutoSize = true;
+            this.lblxPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblxPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblxPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblxPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblxPrecio.Location = new System.Drawing.Point(279, 146);
+            this.lblxPrecio.Name = "lblxPrecio";
+            this.lblxPrecio.Size = new System.Drawing.Size(16, 17);
+            this.lblxPrecio.TabIndex = 22;
+            this.lblxPrecio.Text = "×";
+            this.lblxPrecio.Visible = false;
+            // 
             // frmAgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(356, 479);
             this.ControlBox = false;
+            this.Controls.Add(this.lblxPrecio);
+            this.Controls.Add(this.lblxCodigo);
+            this.Controls.Add(this.lblxNombre);
             this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.pbxImagen);
             this.Controls.Add(this.lblMarca);
@@ -232,9 +285,11 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
+            this.MaximumSize = new System.Drawing.Size(372, 518);
+            this.MinimumSize = new System.Drawing.Size(372, 518);
             this.Name = "frmAgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar nuevo articulo";
+            this.Text = "Agregar nuevo artículo";
             this.Load += new System.EventHandler(this.frmAgregarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.ResumeLayout(false);
@@ -262,5 +317,8 @@
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Button btnImagen;
+        private System.Windows.Forms.Label lblxNombre;
+        private System.Windows.Forms.Label lblxCodigo;
+        private System.Windows.Forms.Label lblxPrecio;
     }
 }

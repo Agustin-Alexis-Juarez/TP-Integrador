@@ -32,7 +32,7 @@ namespace Presentacion
             cboCampo.Items.Add(" ");
             cboCampo.Items.Add("Precio");
             cboCampo.Items.Add("Nombre");
-            cboCampo.Items.Add("Descricion");
+            cboCampo.Items.Add("Descripcíon");
 
         }
 
@@ -106,10 +106,19 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            try
+            {
             Articulo selec = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             frmAgregarArticulo modificar = new frmAgregarArticulo(selec);
             modificar.ShowDialog();
             cargar();
+
+            }
+            catch(NullReferenceException)
+            {
+
+                MessageBox.Show("Seleccione un Artículo para Modificar.");
+            }
         }
 
         private void btnELiminar_Click(object sender, EventArgs e)
@@ -125,6 +134,11 @@ namespace Presentacion
                     cargar();
                 }
             }
+            catch(NullReferenceException)
+            {
+                MessageBox.Show("Seleccione un Artículo para Borrar.");
+            }
+
             catch (Exception ex)
             {
 
@@ -395,7 +409,7 @@ namespace Presentacion
             catch (NullReferenceException)
             {
 
-                MessageBox.Show("Seleccione un Articulo para ver detalles.");
+                MessageBox.Show("Seleccione un Artículo para ver detalles.");
             }
             catch(Exception ex)
             {

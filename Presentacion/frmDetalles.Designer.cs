@@ -45,8 +45,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -66,9 +66,9 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(12, 214);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(55, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(57, 13);
             this.lblCategoria.TabIndex = 2;
-            this.lblCategoria.Text = "Categoria:";
+            this.lblCategoria.Text = "Categoría:";
             // 
             // lblImagen
             // 
@@ -84,9 +84,9 @@
             this.lblCodArticulo.AutoSize = true;
             this.lblCodArticulo.Location = new System.Drawing.Point(9, 94);
             this.lblCodArticulo.Name = "lblCodArticulo";
-            this.lblCodArticulo.Size = new System.Drawing.Size(96, 13);
+            this.lblCodArticulo.Size = new System.Drawing.Size(98, 13);
             this.lblCodArticulo.TabIndex = 4;
-            this.lblCodArticulo.Text = "Codigo de Articulo:";
+            this.lblCodArticulo.Text = "Código de Artículo:";
             // 
             // lblNombre
             // 
@@ -198,14 +198,6 @@
             this.panel4.Size = new System.Drawing.Size(553, 33);
             this.panel4.TabIndex = 19;
             // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Location = new System.Drawing.Point(13, 165);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(551, 1);
-            this.panel11.TabIndex = 17;
-            // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
@@ -213,7 +205,15 @@
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
             this.lblDescripcion.TabIndex = 3;
-            this.lblDescripcion.Text = "Descripcion:";
+            this.lblDescripcion.Text = "Descripción:";
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Location = new System.Drawing.Point(13, 165);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(551, 1);
+            this.panel11.TabIndex = 17;
             // 
             // frmDetalles
             // 
@@ -237,6 +237,8 @@
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.panel9);
+            this.MaximumSize = new System.Drawing.Size(593, 349);
+            this.MinimumSize = new System.Drawing.Size(593, 349);
             this.Name = "frmDetalles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDetalles";
