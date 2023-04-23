@@ -8,6 +8,7 @@ namespace datos
 {
     public class MarcaDatos
     {
+		//
         public List<Marca> listar()
         {
 			AccesoDatos datos = new AccesoDatos();

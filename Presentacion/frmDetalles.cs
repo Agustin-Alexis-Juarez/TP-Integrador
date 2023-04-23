@@ -13,12 +13,12 @@ namespace Presentacion
 {
     public partial class frmDetalles : Form
     {
+        //
         private Articulo seleccionado;
         public frmDetalles(Articulo art)
         {
             InitializeComponent();
             seleccionado = art;
-            this.Text = "Detalles";
         }
 
         private void frmDetalles_Load(object sender, EventArgs e)

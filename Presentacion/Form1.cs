@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public partial class FrmMain : Form
     {
-
+        //
         private List<Articulo> listaArticulos;
         private bool filtroNumero = false;
 
@@ -167,7 +167,7 @@ namespace Presentacion
             
         }
 
-
+        
         private void cargarMarca()
         {
             MarcaDatos marca = new MarcaDatos();

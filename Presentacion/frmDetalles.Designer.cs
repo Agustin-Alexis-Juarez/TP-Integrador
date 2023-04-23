@@ -118,7 +118,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(12, 70);
+            this.panel1.Location = new System.Drawing.Point(15, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(551, 1);
             this.panel1.TabIndex = 16;
@@ -134,7 +134,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(15, 137);
+            this.panel3.Location = new System.Drawing.Point(15, 141);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(551, 1);
             this.panel3.TabIndex = 17;
@@ -143,7 +143,7 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.panel10);
-            this.panel5.Location = new System.Drawing.Point(15, 197);
+            this.panel5.Location = new System.Drawing.Point(15, 201);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(551, 1);
             this.panel5.TabIndex = 17;
@@ -159,7 +159,7 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(15, 226);
+            this.panel6.Location = new System.Drawing.Point(15, 227);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(551, 1);
             this.panel6.TabIndex = 17;
@@ -192,6 +192,7 @@
             // panel4
             // 
             this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.lblDescripcion);
             this.panel4.Location = new System.Drawing.Point(12, 149);
             this.panel4.Name = "panel4";
@@ -210,7 +211,7 @@
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Location = new System.Drawing.Point(13, 165);
+            this.panel11.Location = new System.Drawing.Point(2, 20);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(551, 1);
             this.panel11.TabIndex = 17;
@@ -221,7 +222,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(577, 310);
-            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -241,7 +241,7 @@
             this.MinimumSize = new System.Drawing.Size(593, 349);
             this.Name = "frmDetalles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDetalles";
+            this.Text = "Detalles";
             this.Load += new System.EventHandler(this.frmDetalles_Load);
             this.panel5.ResumeLayout(false);
             this.panel9.ResumeLayout(false);

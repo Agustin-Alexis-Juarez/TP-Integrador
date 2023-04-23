@@ -8,6 +8,7 @@ namespace datos
 {
     public class CategoriaDatos
     {
+        //
         public List<Categoria> listar()
         {
             AccesoDatos datos = new AccesoDatos();

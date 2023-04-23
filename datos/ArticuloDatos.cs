@@ -8,7 +8,7 @@ namespace datos
 {
     public class ArticuloDatos
     {
-
+        //
         public List<Articulo> listar()
         {
             List<Articulo> lista = new List<Articulo>();

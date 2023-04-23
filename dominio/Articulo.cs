@@ -9,6 +9,7 @@ namespace dominio
 {
     public class Articulo
     {
+        //
         public int Id { get; set; }
         public string CodigoArticulo { get; set; }
 

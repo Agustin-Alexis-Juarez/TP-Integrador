@@ -17,6 +17,7 @@ namespace Presentacion
 {
     public partial class frmAgregarArticulo : Form
     {
+        //
         private Articulo art = null;
         private OpenFileDialog archivo = null;
 
@@ -178,7 +179,7 @@ namespace Presentacion
 
         private void txtNombre_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombre.Text))
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
                 lblxNombre.Visible = true;
             else
                 lblxNombre.Visible = false;
@@ -206,7 +207,7 @@ namespace Presentacion
 
         private void txtCodigo_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCodigo.Text))
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text))
                 lblxCodigo.Visible = true;
             else
                 lblxCodigo.Visible = false;
@@ -219,7 +220,7 @@ namespace Presentacion
 
         private bool validartTxt(TextBox text, Label lbl)
         {
-            if(string.IsNullOrEmpty(text.Text))
+            if(string.IsNullOrWhiteSpace(text.Text))
             {
                 lbl.Visible = true;
                 return true;
@@ -231,5 +232,5 @@ namespace Presentacion
     }
 
 
-
+    
 }

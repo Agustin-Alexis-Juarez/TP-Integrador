@@ -8,6 +8,7 @@ namespace dominio
 {
     public class Categoria
     {
+        //
         public int id { get; set; }
         public string Descripcion { get; set; }
 

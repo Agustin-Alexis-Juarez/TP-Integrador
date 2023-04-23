@@ -8,6 +8,7 @@ namespace datos
 {
     public class AccesoDatos
     {
+        //
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
@@ -17,7 +18,7 @@ namespace datos
                 get { return lector; }
             }
 
-        public AccesoDatos () //constructor
+        public AccesoDatos ()
         {
             conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
             comando = new SqlCommand();

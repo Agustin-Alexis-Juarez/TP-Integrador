@@ -68,7 +68,7 @@
             this.dgvArticulos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(526, 436);
-            this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.TabIndex = 1;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // cboCampo
@@ -78,7 +78,7 @@
             this.cboCampo.Location = new System.Drawing.Point(94, 29);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(121, 21);
-            this.cboCampo.TabIndex = 3;
+            this.cboCampo.TabIndex = 0;
             this.cboCampo.TextChanged += new System.EventHandler(this.cboCampo_TextChanged);
             // 
             // cboCriterio
@@ -89,7 +89,7 @@
             this.cboCriterio.Location = new System.Drawing.Point(94, 68);
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(121, 21);
-            this.cboCriterio.TabIndex = 2;
+            this.cboCriterio.TabIndex = 1;
             this.cboCriterio.TextChanged += new System.EventHandler(this.cboCriterio_TextChanged);
             // 
             // txtFiltrar
@@ -97,7 +97,7 @@
             this.txtFiltrar.Location = new System.Drawing.Point(75, 11);
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(100, 20);
-            this.txtFiltrar.TabIndex = 1;
+            this.txtFiltrar.TabIndex = 0;
             this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // btnELiminar
@@ -105,7 +105,7 @@
             this.btnELiminar.Location = new System.Drawing.Point(454, 480);
             this.btnELiminar.Name = "btnELiminar";
             this.btnELiminar.Size = new System.Drawing.Size(75, 23);
-            this.btnELiminar.TabIndex = 7;
+            this.btnELiminar.TabIndex = 5;
             this.btnELiminar.Text = "Eliminar";
             this.btnELiminar.UseVisualStyleBackColor = true;
             this.btnELiminar.Click += new System.EventHandler(this.btnELiminar_Click);
@@ -115,7 +115,7 @@
             this.btnModificar.Location = new System.Drawing.Point(84, 480);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 6;
+            this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -125,7 +125,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(3, 480);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -144,7 +144,7 @@
             this.btnDetalles.Location = new System.Drawing.Point(165, 480);
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(75, 23);
-            this.btnDetalles.TabIndex = 8;
+            this.btnDetalles.TabIndex = 4;
             this.btnDetalles.Text = "Ver detalles";
             this.btnDetalles.UseVisualStyleBackColor = true;
             this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
@@ -193,7 +193,7 @@
             this.cboMarca.Location = new System.Drawing.Point(94, 107);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 21);
-            this.cboMarca.TabIndex = 10;
+            this.cboMarca.TabIndex = 2;
             // 
             // cboCategoria
             // 
@@ -203,7 +203,7 @@
             this.cboCategoria.Location = new System.Drawing.Point(94, 146);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cboCategoria.TabIndex = 0;
+            this.cboCategoria.TabIndex = 3;
             // 
             // lblMarca
             // 
@@ -238,7 +238,7 @@
             this.txtFiltroAvanzado.Location = new System.Drawing.Point(71, 188);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(121, 20);
-            this.txtFiltroAvanzado.TabIndex = 5;
+            this.txtFiltroAvanzado.TabIndex = 4;
             this.txtFiltroAvanzado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroAvanzado_KeyPress);
             // 
             // panelFiltroAvanzado
@@ -289,7 +289,7 @@
             this.MinimumSize = new System.Drawing.Size(878, 597);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Lista de Artículos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
